@@ -1,4 +1,4 @@
-import homeLanding from "./pages/homeLanding";
+import { Router } from "./routes/router";
+import {getStore} from "./redux/store"
 
-const app = document.querySelector('#app');
-app.appendChild(homeLanding());
+Router(window.location.pathname)
