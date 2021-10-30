@@ -1,4 +1,14 @@
-import { Router } from "./routes/router";
-import {getStore} from "./redux/store"
+import {Router} from "./routes/router"
+import {createStore} from "./redux/store";
+import {dataFetcher} from "./utils/dataFetcher";
 
-Router(window.location.pathname)
+const app = document.querySelector("#app");
+
+const onAppInit = async function(e){
+    let todoItmes = await dataFetcher('./data/todo.json');
+
+    createStore(todoItmes);
+    Router(window.location.pathname);
+}
+
+window.addEventListener('load', onAppInit)

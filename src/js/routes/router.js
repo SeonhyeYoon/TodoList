@@ -8,7 +8,6 @@ const routes = {
 }
 
 const Router =  function (pathname){
-
   const isValidRoute = Object.keys(routes).find(key => key===pathname);
  
   // loading and unloading pages into the div app

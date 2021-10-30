@@ -1,6 +1,6 @@
-const dataFetcher = async function(url=null){
+const dataFetcher = async function(url=undefined){
 
-  const reponse = await fetch(url);
+  const response = await fetch(url);
   const payload = await response.json()
 
   return payload;
