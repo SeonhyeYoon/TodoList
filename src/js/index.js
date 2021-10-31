@@ -6,6 +6,10 @@ const app = document.querySelector("#app");
 
 const onAppInit = async function(e){
     let todoItmes = await dataFetcher('./data/todo.json');
+    
+    if (todoItmes[0].id === undefined){       
+        todoItmes = [...keyGenerator(todoItmes)]
+    }
 
     createStore(todoItmes);
     Router(window.location.pathname);

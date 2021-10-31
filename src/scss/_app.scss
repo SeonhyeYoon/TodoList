@@ -1,0 +1,38 @@
+.app-home-header {
+    .ui-tagline {
+        margin: 0;
+        line-height: 1.0;
+        margin-bottom: 1rem;
+    }
+}
+
+header {
+    text-align: center;
+}
+
+#items {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 3rem;
+    }
+
+    .flex-container {
+        div {
+            margin: 5px
+        }
+    }
+
+    li {
+        border: solid 1px lightgrey;
+        box-shadow: 3px 3px 3px grey;
+        box-shadow: inset 1rem 0 #ebc68c;
+        border-radius: 5px;
+        padding: 0 1.5rem;
+    }
+}
+
+.add-category {
+    text-align: center;
+    background-color: #76bfba;
+}

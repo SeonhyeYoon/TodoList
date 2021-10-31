@@ -9,26 +9,26 @@
   "id": "rgdf3e82",
   "category": "health",
   "description": "Poss imusa dip is icing",
-  "due": "Tuesday November 2nd",
+  "duedate": "Tuesday November 2nd",
   "isComplete": true
 }, {
   "id": "sfasdf5a",
   "category": "home",
   "description": "Poss imusa dip is icing",
-  "due": "Thursday November 4th",
+  "duedate": "Thursday November 4th",
   "isComplete": true
 }, {
   "id": "ad141f2a",
   "category": "school",
   "description": "Poss imusa dip is icing",
-  "due": "Monday November 15th",
+  "duedate": "Monday November 15th",
   "isComplete": true
 }
 , {
   "id": "xbr5t6as",
   "category": "work",
   "description": "Poss imusa dip is icing",
-  "due": "Monday November 8th",
+  "duedate": "Monday November 8th",
   "isComplete": true
 }
 ]
