@@ -12,7 +12,7 @@ const onAppInit = async function(e){
     }
 
     createStore(todoItmes);
-    Router(window.location.assign('./pages/todo.js'));
+    Router(window.location.pathname);
 }
 
 window.addEventListener('load', onAppInit)
