@@ -12,7 +12,7 @@ const onAppInit = async function(e){
     }
 
     createStore(todoItmes);
-    Router(bash.location.pathname);
+    Router(window.location.pathname);
 }
 
 window.addEventListener('load', onAppInit)
