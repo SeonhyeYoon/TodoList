@@ -1,5 +1,5 @@
-import makeElement from "../utils/makeElement";
-import link from "../components/ui/link"
+import makeElement from "~/src/js/utils/makeElement";
+import link from "~/src/js/components/ui/link"
 
 const notFound = function(){
   const page = document.createElement('div');

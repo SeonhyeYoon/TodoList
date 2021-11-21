@@ -1,9 +1,9 @@
-import makeElement from "../utils/makeElement";
-import logo from "../components/icons/logo";
-import tagline from "../components/header/tagline";
-import { getStore } from "../redux/store"
-import list from "../components/cards/list";
-import item from "../components/cards/item";
+import makeElement from "~/src/js/utils/makeElement";
+import logo from "~/src/js/components/icons/logo";
+import tagline from "~/src/js/components/header/tagline";
+import { getStore } from "~/src/js/redux/store"
+import list from "~/src/js/components/cards/list";
+import item from "~/src/js/components/cards/item";
 
 const todoApp = function (){
   /* Branding Header */

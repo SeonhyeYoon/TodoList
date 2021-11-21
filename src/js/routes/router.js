@@ -1,9 +1,10 @@
-import index from "../pages/index";
-import todoApp from "../pages/todo";
-import notFound from "../pages/notFound";
+import home from "../pages/home";
+import todoApp from "../pages/app";
+import notFound from "../pages/notfound";
+import deletePage from "../pages/delete"
 
 const routes = {
-  "/": index,
+  "/": home,
   "/app": todoApp,
   "/delete": deletePage,
   "/*": notFound

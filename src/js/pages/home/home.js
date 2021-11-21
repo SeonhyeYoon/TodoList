@@ -1,9 +1,9 @@
-import logo from "../components/icons/logo";
-import tagline from "../components/header/tagline";
-import link from "../components/ui/link"
-import makeElement from "../utils/makeElement";
+import logo from "~/src/js/components/icons/logo";
+import tagline from "~/src/js/components/header/tagline";
+import link from "~/src/js/components/ui/link"
+import makeElement from "~/src/js/utils/makeElement";
 
-const index = function (params){
+const home = function (params){
   
   const homeHeader = document.createElement('header');
   homeHeader.classList.add('home-header');
@@ -19,4 +19,4 @@ const index = function (params){
   return homeHeader;
 }
 
-export default index;
+export default home;

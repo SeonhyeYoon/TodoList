@@ -14,4 +14,4 @@ function redirect(){
     return(src('./_redirects').pipe(dest('./dist')))
 }
 
-exports.default = sereis(static, redirect);
+exports.default = series(static, redirect);
