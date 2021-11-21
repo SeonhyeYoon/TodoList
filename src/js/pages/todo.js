@@ -12,7 +12,7 @@ const todoApp = function (){
   banner.classList.add('app-home-header');
 
   const pageLogo = makeElement(logo());
-  const pageTagline = makeElement(tagline('List Your Work!'))
+  const pageTagline = makeElement(tagline('Make your own list!'))
   banner.append(pageLogo);
   banner.append(pageTagline);
 

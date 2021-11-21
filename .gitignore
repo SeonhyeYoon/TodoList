@@ -5,7 +5,7 @@
 /.vscode
 
 # parcel files
-/.pracel-cache
+/.parcel-cache
 /dist
 
 # System
