@@ -9,6 +9,9 @@ const list = function (){
         <ul id="items" class="items">
 
         </ul>
+        <footer>
+        
+        </footer>
     </aside>
     `
 

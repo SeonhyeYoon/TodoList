@@ -4,8 +4,11 @@ import tagline from "~/src/js/components/header/tagline";
 import { getStore } from "~/src/js/redux/store"
 import list from "~/src/js/components/cards/list";
 import item from "~/src/js/components/cards/item";
+import {Router} from "~/src/js/routes/router"
 
 const todoApp = function (){
+  const itemList = getStore();
+
   /* Branding Header */
   const page = document.createElement('div');
   const banner = document.createElement('header');
@@ -18,16 +21,26 @@ const todoApp = function (){
 
   page.append(banner);
 
-  /* Todo Component */
-  const itemList = getStore();
   const container = list();
 
-  if (itemList !== null){
+  // EVENT HANDLER FUNCTION FOR REMOVING AN EMPLOYEE
+  function onDeleteCategory (e){
+    const categoryId = {id:e.currentTarget.dataset.key};    
+    Router('/delete', categoryId);
+
+}
+  /* Todo Component */
+
+  function render(){
     const ul = container.querySelector('ul');
     const elements = itemList.map(comp=> item(comp));
-    elements.forEach(element=> ul.append(element));
-    page.append(container);
+    elements.forEach(element=> {
+      element.querySelector('#delete').addEventListener('click', onDeleteCategory);
+      ul.append(element)
+    });
+    page.append(container);   
   }
+  render();
 
   /* new todo category */
   let add = document.createElement('div');
@@ -36,6 +49,7 @@ const todoApp = function (){
   button.append('Add Todo Category');
   add.append(button);
   page.append(add);
+
 
   return page;
 }
