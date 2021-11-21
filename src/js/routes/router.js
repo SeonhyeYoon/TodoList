@@ -4,7 +4,9 @@ import notFound from "../pages/notFound";
 
 const routes = {
   "/": index,
-  "/app": todoApp
+  "/app": todoApp,
+  "/delete": deletePage,
+  "/*": notFound
 }
 
 const Router = function (pathname, params=null) {
@@ -19,7 +21,7 @@ const Router = function (pathname, params=null) {
   if(isValidRoute === undefined || isValidRoute ===''){
   app.appendChild(notFound())
   }else{
-  app.appendChild(routes[isValidRoute]() )
+  app.appendChild(routes[isValidRoute](params))
   }
   }
 export { Router}
