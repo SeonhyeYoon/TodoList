@@ -23,6 +23,12 @@ const todoApp = function (){
 
   const container = list();
 
+  // Event Handler for editing todo list
+  function onEditTodo(e){
+    const categoryId = {id:e.currentTarget.dataset.key};
+    Router('/edit', categoryId);
+  }
+
   // EVENT HANDLER FUNCTION FOR REMOVING AN EMPLOYEE
   function onDeleteCategory (e){
     const categoryId = {id:e.currentTarget.dataset.key};    
@@ -35,6 +41,7 @@ const todoApp = function (){
     const ul = container.querySelector('ul');
     const elements = itemList.map(comp=> item(comp));
     elements.forEach(element=> {
+      element.querySelector('#edit').addEventListener('click', onEditTodo)
       element.querySelector('#delete').addEventListener('click', onDeleteCategory);
       ul.append(element)
     });
