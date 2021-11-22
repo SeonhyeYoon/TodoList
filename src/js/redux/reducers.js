@@ -1,5 +1,5 @@
-import { update } from 'lodash';
-import {getStore, updateStore} from './store'
+import { create, update } from 'lodash';
+import {createStore, getStore, updateStore} from './store'
 
 function reducer (action){
 
@@ -26,7 +26,10 @@ function reducer (action){
             action.cb();
             return "edit todo with an id";
         case "add": 
-
+            const addStore = [...store.slice(index), ...store.slice(index+1)];
+            
+            updateStore(addStore);
+            action.cb();
             return "create a new todo";
         default: return store;
     }

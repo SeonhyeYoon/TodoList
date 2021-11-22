@@ -5,6 +5,7 @@ import { getStore } from "~/src/js/redux/store"
 import list from "~/src/js/components/cards/list";
 import item from "~/src/js/components/cards/item";
 import {Router} from "~/src/js/routes/router"
+import keyGenerator from "../../utils/key";
 
 const todoApp = function (){
   const itemList = getStore();
@@ -29,12 +30,22 @@ const todoApp = function (){
     Router('/edit', categoryId);
   }
 
-  // EVENT HANDLER FUNCTION FOR REMOVING AN EMPLOYEE
+  // EVENT HANDLER FUNCTION FOR REMOVING
   function onDeleteCategory (e){
     const categoryId = {id:e.currentTarget.dataset.key};    
     Router('/delete', categoryId);
+  }
+  
+  // Event Handler for adding
+  function onAddTodo (e){
+    const categoryId = {id:e.currentTarget.dataset.key};    
+    if (categoryId == null)
+    {
+      categoryId = [...keyGenerator(categoryId)]
+    }    
+    Router('/add', categoryId);
+  }
 
-}
   /* Todo Component */
 
   function render(){
@@ -54,9 +65,9 @@ const todoApp = function (){
   let button = document.createElement('button');
   add.classList.add('add-category');
   button.append('Add Todo Category');
+  button.addEventListener('click', onAddTodo);
   add.append(button);
   page.append(add);
-
 
   return page;
 }

@@ -2,6 +2,7 @@ import home from "../pages/home";
 import todoApp from "../pages/app";
 import deletePage from "../pages/delete";
 import editPage from "../pages/edit";
+import addPage from "../pages/add";
 import notFound from "../pages/notfound";
 
 const routes = {
@@ -9,6 +10,7 @@ const routes = {
   "/app": todoApp,
   "/delete": deletePage,
   "/edit": editPage,
+  "/add": addPage,
   "/*": notFound
 }
 
