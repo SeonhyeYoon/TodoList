@@ -19,7 +19,7 @@ const editPage = function(props){
     function onEditTodo(e){
         const index = getStore().findIndex((item)=>{
             return(item.id === props.id)
-        });        
+        });
         const action = {
             type: "edit",
             payload: {index},
@@ -38,48 +38,47 @@ const editPage = function(props){
         <div class="form" data-key="id">
             <label class="form" for="id">
                 ID
-                <input type="text" placeholder="${getStore()[index].id}" disabled>
+                <input id="id" type="text" placeholder="${getStore()[index].id}" disabled>
             </label>
 
             <label class="form" for="category">
                 Category
-                <input type="text" placeholder="${getStore()[index].category}">
+                <input id="category" type="text" placeholder="${getStore()[index].category}">
             </label>
 
             <label class="form" for="isComplete">
                 Completed
-                <input type="checkbox" checked>
+                <input id="isComplete" type="checkbox" checked>
             </label>
             
             <label class="form" for="description">
                 Description
-                <input type="text" placeholder="${getStore()[index].description}">
+                <input id="description" type="text" placeholder="${getStore()[index].description}">
             </label>
 
             <label class="form" for="startDate">
                 Start Date            
-                <input type="text" placeholder="${getStore()[index].startDate}">
+                <input id="startDate" type="text" placeholder="${getStore()[index].startDate}">
             </label>
 
             <label class="form" for="startTime">
                 Start Time            
-                <input type="text" placeholder="${getStore()[index].startTime}">
+                <input id="startTime" type="text" placeholder="${getStore()[index].startTime}">
             </label>
 
             <label class="form" for="duedate">
                 End Date            
-                <input type="text" placeholder="${getStore()[index].duedate}">
+                <input id="duedate" type="text" placeholder="${getStore()[index].duedate}">
             </label>
 
             <label class="form" for="endTime">
                 End Time            
-                <input type="text" placeholder="${getStore()[index].endTime}">
+                <input id="endTime" type="text" placeholder="${getStore()[index].endTime}">
             </label>
         </div>
         <div class="button"></div>
     </header>
     `
-
     const pageHeader = makeElement(headerTemplate);
     cancelButton.addEventListener('click', onCancelEdit);
     editButton.addEventListener('click', onEditTodo);
